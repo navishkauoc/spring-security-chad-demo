@@ -28,19 +28,22 @@
 	
 	<hr>
 	
-	<!-- A link to point to /leaders - only for the Managers -->
-	<p>
-		<a href="${pageContext.request.contextPath}/leaders">Leadership meeting</a>
-		(Only for Managers)
-	</p>
+	<security:authorize access="hasRole('MANAGER')">
+		<!-- A link to point to /leaders - only for the Managers -->
+		<p>
+			<a href="${pageContext.request.contextPath}/leaders">Leadership meeting</a>
+			(Only for Managers)
+		</p>
+	</security:authorize>
 	
+	<security:authorize access="hasRole('ADMIN')">
 	<!-- A link to point to /systems - only for the Admins -->
 	<p>
 		<a href="${pageContext.request.contextPath}/systems">IT Systems meeting</a>
 		(Only for Admins)
 	</p>
+	</security:authorize>
 	
-	<hr>
 	<form:form action="${pageContext.request.contextPath}/logout" method="POST">
 		<input type="submit" value="Logout" />
 	</form:form>
