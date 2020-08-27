@@ -28,16 +28,16 @@
 	
 	<hr>
 	
-	<!-- A link to point to /systems - only for the Admins -->
-	<p>
-		<a href="${pageContext.request.contextPath}/systems">IT Systems meeting</a>
-		(Only for Admins)
-	</p>
-	
 	<!-- A link to point to /leaders - only for the Managers -->
 	<p>
 		<a href="${pageContext.request.contextPath}/leaders">Leadership meeting</a>
 		(Only for Managers)
+	</p>
+	
+	<!-- A link to point to /systems - only for the Admins -->
+	<p>
+		<a href="${pageContext.request.contextPath}/systems">IT Systems meeting</a>
+		(Only for Admins)
 	</p>
 	
 	<hr>
